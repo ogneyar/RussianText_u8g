@@ -1,1 +1,1 @@
-# Russian Text For Library u8g_lib
+# Russian text for library u8g_lib
