@@ -1,1 +1,1 @@
-## Library Test Arduino 
+# Russian Text For Library u8g_lib

@@ -1,20 +1,20 @@
-// русская 'А'
+// русская 'ё'
 
-// void A(uint8_t x, uint8_t y);
+// void yo(uint8_t x, uint8_t y);
 
 
-void A(uint8_t x, uint8_t y) { 
-    // А
+void yo(uint8_t x, uint8_t y) { 
+    // ё
 
 	//  .....  1
-	//  ..0..  2
-	//  .0.0.  3
-	//  0...0  4
-	//  0...0  5
-	//  00000  6
-	//  0...0  7
-	//  0...0  8
-	//  .....  9
+	//  .....  2 
+    //  .0.0.  3
+    //  .000.  4
+    //  0...0  5
+    //  00000  6
+    //  0....  7
+    //  .0000  8
+    //  .....  9
 
     // вывод построчно
     
@@ -28,7 +28,7 @@ void A(uint8_t x, uint8_t y) {
     // вторая строка
     // u8g.drawPixel(x+0,y+1);
     // u8g.drawPixel(x+1,y+1);
-    u8g.drawPixel(x+2,y+1);
+    // u8g.drawPixel(x+2,y+1);
     // u8g.drawPixel(x+3,y+1);
     // u8g.drawPixel(x+4,y+1);
 
@@ -40,11 +40,11 @@ void A(uint8_t x, uint8_t y) {
     // u8g.drawPixel(x+4,y+2);
 
     // четвёртая строка
-    u8g.drawPixel(x+0,y+3);
-    // u8g.drawPixel(x+1,y+3);
-    // u8g.drawPixel(x+2,y+3);
-    // u8g.drawPixel(x+3,y+3);
-    u8g.drawPixel(x+4,y+3);
+    // u8g.drawPixel(x+0,y+3);
+    u8g.drawPixel(x+1,y+3);
+    u8g.drawPixel(x+2,y+3);
+    u8g.drawPixel(x+3,y+3);
+    // u8g.drawPixel(x+4,y+3);
 
     // пятая строка
     u8g.drawPixel(x+0,y+4);
@@ -65,13 +65,13 @@ void A(uint8_t x, uint8_t y) {
     // u8g.drawPixel(x+1,y+6);
     // u8g.drawPixel(x+2,y+6);
     // u8g.drawPixel(x+3,y+6);
-    u8g.drawPixel(x+4,y+6);
+    // u8g.drawPixel(x+4,y+6);
     
     // восьмая строка
-    u8g.drawPixel(x+0,y+7);
-    // u8g.drawPixel(x+1,y+7);
-    // u8g.drawPixel(x+2,y+7);
-    // u8g.drawPixel(x+3,y+7);
+    // u8g.drawPixel(x+0,y+7);
+    u8g.drawPixel(x+1,y+7);
+    u8g.drawPixel(x+2,y+7);
+    u8g.drawPixel(x+3,y+7);
     u8g.drawPixel(x+4,y+7);
    
     // девятая строка
