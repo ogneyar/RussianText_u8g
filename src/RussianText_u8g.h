@@ -1,11 +1,29 @@
 
-
+// void u8g_prepare(void);
 // void send(char* str, uint8_t x, uint8_t y);
 
 #include "uppercase.h" // заглавные
 #include "lowercase.h" // строчные
 
 
+// подготовка экрана
+void u8g_prepare(void) {
+    u8g.setFont(u8g_font_6x10);
+    u8g.setFontRefHeightExtendedText();
+    u8g.setDefaultForegroundColor();
+    u8g.setFontPosTop();
+
+    // u8g2.setFont(u8g2_font_6x10_tf);
+    // u8g2.setFontRefHeightExtendedText();
+    // u8g2.setDrawColor(1);
+    // u8g2.setFontPosTop();
+    // u8g2.setFontDirection(0);
+
+    // обязательно необходим контраст
+    // u8g2.setContrast(80);
+}
+
+// вывод на кран русских символоов
 void send(char * str, uint8_t x, uint8_t y) {
 
     uint8_t i = 0;
