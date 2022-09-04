@@ -12,5 +12,8 @@
 #include "uppercase/09-Z.h"
 #include "uppercase/10-I.h"
 #include "uppercase/11-IY.h"
+#include "uppercase/12-K.h"
+#include "uppercase/13-L.h"
+#include "uppercase/14-M.h"
 
 #endif

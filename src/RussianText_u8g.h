@@ -61,6 +61,17 @@ void send(char * str, uint8_t x, uint8_t y) {
         if ( ( (str[i] & 0x00ff) == ('й'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('й' & 0x00ff) ) ) {
             iy(x, y);
         }else 
+        if ( ( (str[i] & 0x00ff) == ('к'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('к' & 0x00ff) ) ) {
+            k(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('л'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('л' & 0x00ff) ) ) {
+            l(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('м'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('м' & 0x00ff) ) ) {
+            m(x, y);
+        }
+        
+        else 
         if ( ( (str[i] & 0x00ff) == ('А'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('А' & 0x00ff) ) ) {
             A(x, y);
         }else 
@@ -93,10 +104,19 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('Й'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Й' & 0x00ff) ) ) {
             IY(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('К'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('К' & 0x00ff) ) ) {
+            K(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Л'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Л' & 0x00ff) ) ) {
+            L(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('М'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('М' & 0x00ff) ) ) {
+            M(x, y);
         }
    
         i = i + 2;
-        x = x + 8;
+        x = x + 7;
     }
 }
 

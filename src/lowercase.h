@@ -12,5 +12,8 @@
 #include "lowercase/09-z.h"
 #include "lowercase/10-i.h"
 #include "lowercase/11-iy.h"
+#include "lowercase/12-k.h"
+#include "lowercase/13-l.h"
+#include "lowercase/14-m.h"
 
 #endif
