@@ -1,3 +1,5 @@
+#ifndef _UPPERCASE_H_
+#define _UPPERCASE_H_
 
 #include "uppercase/01-A.h"
 #include "uppercase/02-B.h"
@@ -10,3 +12,5 @@
 #include "uppercase/09-Z.h"
 #include "uppercase/10-I.h"
 #include "uppercase/11-IY.h"
+
+#endif

@@ -1,3 +1,5 @@
+#ifndef _LOWERCASE_H_
+#define _LOWERCASE_H_
 
 #include "lowercase/01-a.h" 
 #include "lowercase/02-b.h"
@@ -10,3 +12,5 @@
 #include "lowercase/09-z.h"
 #include "lowercase/10-i.h"
 #include "lowercase/11-iy.h"
+
+#endif

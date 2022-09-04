@@ -10,7 +10,7 @@
 void u8g_prepare(void) {
     u8g.setFont(u8g_font_6x10);
     u8g.setFontRefHeightExtendedText();
-    u8g.setDefaultForegroundColor();
+    // u8g.setDefaultForegroundColor(); // отключил для работы ESP8266
     u8g.setFontPosTop();
 
     // u8g2.setFont(u8g2_font_6x10_tf);
