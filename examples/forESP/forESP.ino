@@ -22,8 +22,8 @@ U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g(U8G2_R0, U8X8_PIN_NONE);
 void russian_text(void) {
     // функция send из библиотеки RussianText_u8g
     // OFFSET можно убрать
-    send("абвгдеёжзийклмн", 5+OFFSET, 5); 
-    send("АБВГДЕЁЖЗИЙКЛМН", 5+OFFSET, 18);
+    send("абвгдеёжзийклмнопр", 5+OFFSET, 5); 
+    send("АБВГДЕЁЖЗИЙКЛМНОПР", 5+OFFSET, 18);
 }
 
 void setup(void) {

@@ -1,9 +1,9 @@
 // русская 'Е'
 
-// void E(uint8_t x, uint8_t y);
+// void YE(uint8_t x, uint8_t y);
 
 
-void E(uint8_t x, uint8_t y) { 
+void YE(uint8_t x, uint8_t y) { 
     //  Е
 
     //  .....  1
