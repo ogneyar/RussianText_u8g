@@ -1,6 +1,24 @@
 
+// список функций
 // void u8g_prepare(void);
+// void border(void);
 // void send(char* str, uint8_t x, uint8_t y);
+
+#define SCREEN_WIDTH 0
+#define SCREEN_HIGHT 0
+#define OFFSET 0
+
+#ifdef SSD1306_128X32
+#define SCREEN_WIDTH 128
+#define SCREEN_HIGHT 32
+#define OFFSET 0
+#endif
+#ifdef SSD1306_128X64
+#define SCREEN_WIDTH 128
+#define SCREEN_HIGHT 64
+#define OFFSET 2 // сдвиг координат, связан с некорректным выводом информации (может только у меня)
+#endif
+
 
 #include "uppercase.h" // заглавные
 #include "lowercase.h" // строчные
@@ -10,17 +28,15 @@
 void u8g_prepare(void) {
     u8g.setFont(u8g_font_6x10);
     u8g.setFontRefHeightExtendedText();
-    // u8g.setDefaultForegroundColor(); // отключил для работы ESP8266
     u8g.setFontPosTop();
+}
 
-    // u8g2.setFont(u8g2_font_6x10_tf);
-    // u8g2.setFontRefHeightExtendedText();
-    // u8g2.setDrawColor(1);
-    // u8g2.setFontPosTop();
-    // u8g2.setFontDirection(0);
-
-    // обязательно необходим контраст
-    // u8g2.setContrast(80);
+// вывод рамки на экран
+void border(void) { 
+    u8g.drawLine(0+OFFSET, 0, 0+OFFSET, SCREEN_HIGHT-1); // линия рамки слева  
+    u8g.drawLine(0+OFFSET, 0, SCREEN_WIDTH-1, 0); // линия рамки сверху
+    u8g.drawLine(SCREEN_WIDTH-1, 0, SCREEN_WIDTH-1, SCREEN_HIGHT-1); // линия рамки справа
+    u8g.drawLine(0+OFFSET, SCREEN_HIGHT-1, SCREEN_WIDTH-1, SCREEN_HIGHT-1); // линия рамки снизу
 }
 
 // вывод на кран русских символоов
@@ -69,6 +85,9 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('м'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('м' & 0x00ff) ) ) {
             m(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('н'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('н' & 0x00ff) ) ) {
+            n(x, y);
         }
         
         else 
@@ -113,6 +132,9 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('М'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('М' & 0x00ff) ) ) {
             M(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Н'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Н' & 0x00ff) ) ) {
+            N(x, y);
         }
    
         i = i + 2;
