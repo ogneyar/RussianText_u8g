@@ -148,6 +148,9 @@ void send(char * str, uint8_t x, uint8_t y) {
         if ( ( (str[i] & 0x00ff) == ('О'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('О' & 0x00ff) ) ) {
             O(x, y);
         }else 
+        if ( ( (str[i] & 0x00ff) == ('П'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('П' & 0x00ff) ) ) {
+            P(x, y);
+        }else 
         if ( ( (str[i] & 0x00ff) == ('Р'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Р' & 0x00ff) ) ) {
             R(x, y);
         }
