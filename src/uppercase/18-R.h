@@ -26,11 +26,11 @@ void R(uint8_t x, uint8_t y) {
     // u8g.drawPixel(x+4,y);
 
     // вторая строка
-    // u8g.drawPixel(x+0,y+1);
+    u8g.drawPixel(x+0,y+1);
     u8g.drawPixel(x+1,y+1);
     u8g.drawPixel(x+2,y+1);
     u8g.drawPixel(x+3,y+1);
-    u8g.drawPixel(x+4,y+1);
+    // u8g.drawPixel(x+4,y+1);
 
     // третья строка
     u8g.drawPixel(x+0,y+2);

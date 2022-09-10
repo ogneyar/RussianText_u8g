@@ -17,26 +17,43 @@ U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g(U8G2_R0, U8X8_PIN_NONE);
 // обязательно после создания объекта класса u8g
 #include <RussianText_u8g.h>
 
-
-// вывод русских букв на экран
-void russian_text(void) {
-    // функция send из библиотеки RussianText_u8g
-    // OFFSET можно убрать
-    send("абвгдеёжзийклмнопр", 3+OFFSET, 5); 
-    send("АБВГДЕЁЖЗИЙКЛМНОПР", 3+OFFSET, 18);
-}
+void russian_text(byte _mode = ALLCASE, bool _border = false);
 
 void setup(void) {
     u8g.begin();
-    
-    u8g.clearBuffer(); // очистка экрана
-    
-    border(); // функция из библиотеки RussianText_u8g
     russian_text();
-    
-    u8g.sendBuffer(); // перенос данных из памяти на экран
+    delay(2000);
 }
 
 void loop(void) {
-  
+    russian_text(LOWERCASE, true);
+    delay(1000);
+    russian_text(UPPERCASE);
+    delay(1000);
+}
+
+
+// вывод всех русских символов на экран
+void russian_text(byte _mode, bool _border) {
+    u8g.clearBuffer(); // очистка экрана
+    
+    if (_border) border(); // функция из библиотеки RussianText_u8g
+
+    switch(_mode) {
+      case LOWERCASE:
+        // функция send из библиотеки RussianText_u8g
+        send("абвгдеёжзийклмно", 5+OFFSET, 5); // OFFSET можно убрать
+        send("пр", 5+OFFSET, 15);
+      break;
+      case UPPERCASE:
+        send("АБВГДЕЁЖЗИЙКЛМНО", 5+OFFSET, 5);
+        send("ПР", 5+OFFSET, 15);
+      break;
+      case ALLCASE:
+        send("абвгдеёжзийклмнопр", 2+OFFSET, 5);
+        send("АБВГДЕЁЖЗИЙКЛМНОПР", 2+OFFSET, 18);
+      break;
+    }    
+    
+    u8g.sendBuffer(); // перенос данных из памяти на экран
 }

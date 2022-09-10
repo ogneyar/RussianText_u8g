@@ -7,6 +7,9 @@
 #define SCREEN_WIDTH 0
 #define SCREEN_HIGHT 0
 #define OFFSET 0
+#define LOWERCASE 0
+#define UPPERCASE 1
+#define ALLCASE 2
 
 #ifdef SSD1306_128X32
 #define SCREEN_WIDTH 128
