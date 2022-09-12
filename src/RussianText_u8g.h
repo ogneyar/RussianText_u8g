@@ -1,3 +1,4 @@
+#pragma once 
 
 // список функций
 // void u8g_prepare(void);
@@ -100,6 +101,12 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('р'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('р' & 0x00ff) ) ) {
             r(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('с'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('с' & 0x00ff) ) ) {
+            s(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('т'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('т' & 0x00ff) ) ) {
+            t(x, y);
         }
         
         else 
@@ -156,6 +163,12 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('Р'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Р' & 0x00ff) ) ) {
             R(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('С'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('С' & 0x00ff) ) ) {
+            S(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Т'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Т' & 0x00ff) ) ) {
+            T(x, y);
         }
    
         i = i + 2;

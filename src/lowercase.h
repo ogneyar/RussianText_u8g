@@ -19,8 +19,8 @@
 #include "lowercase/16-o.h"   // о
 #include "lowercase/17-p.h"   // п
 #include "lowercase/18-r.h"   // р
-// #include "lowercase/19-s.h"   // с
-// #include "lowercase/20-t.h"   // т
+#include "lowercase/19-s.h"   // с
+#include "lowercase/20-t.h"   // т
 // #include "lowercase/21-u.h"   // у
 // #include "lowercase/22-f.h"   // ф
 // #include "lowercase/23-h.h"   // х

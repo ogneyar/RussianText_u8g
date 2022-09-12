@@ -43,15 +43,15 @@ void russian_text(byte _mode, bool _border) {
       case LOWERCASE:
         // функция send из библиотеки RussianText_u8g
         send("абвгдеёжзийклмно", 5+OFFSET, 5); // OFFSET можно убрать
-        send("пр", 5+OFFSET, 15);
+        send("прст", 5+OFFSET, 15);
       break;
       case UPPERCASE:
         send("АБВГДЕЁЖЗИЙКЛМНО", 5+OFFSET, 5);
-        send("ПР", 5+OFFSET, 15);
+        send("ПРСТ", 5+OFFSET, 15);
       break;
       case ALLCASE:
-        send("абвгдеёжзийклмнопр", 2+OFFSET, 5);
-        send("АБВГДЕЁЖЗИЙКЛМНОПР", 2+OFFSET, 18);
+        send("абвгдеёжзийклмнопрст", 2+OFFSET, 5);
+        send("АБВГДЕЁЖЗИЙКЛМНОПРСТ", 2+OFFSET, 18);
       break;
     }    
     
