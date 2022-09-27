@@ -35,7 +35,7 @@ void loop(void) {
 
 // вывод всех русских символов на экран
 void russian_text(byte _mode, bool _border) {
-    u8g.clearBuffer(); // очистка экрана
+    u8g.clearBuffer(); // очистка экрана 
     
     if (_border) border(); // функция из библиотеки RussianText_u8g
 
