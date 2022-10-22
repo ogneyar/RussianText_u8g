@@ -1,9 +1,9 @@
 //  русская 'ы'
 
-// void er(uint8_t x, uint8_t y);
+// void eri(uint8_t x, uint8_t y);
 
 
-void er(uint8_t x, uint8_t y) { 
+void eri(uint8_t x, uint8_t y) { 
     // ы
 
 	//  .....  1
@@ -62,7 +62,7 @@ void er(uint8_t x, uint8_t y) {
     u8g.drawPixel(x+2,y+5);
     // u8g.drawPixel(x+3,y+5);
     // u8g.drawPixel(x+4,y+5);
-    u8g.drawPixel(x+4,y+5); // 6
+    u8g.drawPixel(x+5,y+5); // 6
     
     // седьмая строка
     u8g.drawPixel(x+0,y+6);
@@ -70,7 +70,7 @@ void er(uint8_t x, uint8_t y) {
     // u8g.drawPixel(x+2,y+6);
     u8g.drawPixel(x+3,y+6);
     // u8g.drawPixel(x+4,y+6);
-    u8g.drawPixel(x+4,y+6); // 6
+    u8g.drawPixel(x+5,y+6); // 6
     
     // восьмая строка
     u8g.drawPixel(x+0,y+7);

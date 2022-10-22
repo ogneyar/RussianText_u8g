@@ -1,9 +1,9 @@
 // русская 'Ф'
 
-// void F(uint8_t x, uint8_t y);
+// void _F(uint8_t x, uint8_t y);
 
 
-void F(uint8_t x, uint8_t y) { 
+void _F(uint8_t x, uint8_t y) { 
     //  Ф
 
     //  .....  1

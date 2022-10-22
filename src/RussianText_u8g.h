@@ -213,7 +213,7 @@ void send(char * str, uint8_t x, uint8_t y) {
             U(x, y);
         }else 
         if ( ( (str[i] & 0x00ff) == ('Ф'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ф' & 0x00ff) ) ) {
-            F(x, y);
+            _F(x, y);
         }else 
         if ( ( (str[i] & 0x00ff) == ('Х'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Х' & 0x00ff) ) ) {
             H(x, y);

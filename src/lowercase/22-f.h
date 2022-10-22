@@ -10,9 +10,9 @@ void f(uint8_t x, uint8_t y) {
 	//  .....  2 
     //  .....  3
     //  ..0..  4
-    //  .000.  5
-    //  0.0.0  6
-    //  .000.  7
+    //  00000  5
+    // 0..0..0 6
+    //  00000  7
     //  ..0..  8
     //  .....  9
 
@@ -47,25 +47,27 @@ void f(uint8_t x, uint8_t y) {
     // u8g.drawPixel(x+4,y+3);
 
     // пятая строка
-    // u8g.drawPixel(x+0,y+4);
+    u8g.drawPixel(x+0,y+4);
     u8g.drawPixel(x+1,y+4);
-    // u8g.drawPixel(x+2,y+4);
+    u8g.drawPixel(x+2,y+4);
     u8g.drawPixel(x+3,y+4);
-    // u8g.drawPixel(x+4,y+4);
+    u8g.drawPixel(x+4,y+4);
     
     // шестая строка
-    u8g.drawPixel(x+0,y+5);
+    u8g.drawPixel(x-1,y+5); // 0
+    // u8g.drawPixel(x+0,y+5);
     // u8g.drawPixel(x+1,y+5);
     u8g.drawPixel(x+2,y+5);
     // u8g.drawPixel(x+3,y+5);
-    u8g.drawPixel(x+4,y+5);
+    // u8g.drawPixel(x+4,y+5);
+    u8g.drawPixel(x+5,y+5); // 6
     
     // седьмая строка
-    // u8g.drawPixel(x+0,y+6);
+    u8g.drawPixel(x+0,y+6);
     u8g.drawPixel(x+1,y+6);
-    // u8g.drawPixel(x+2,y+6);
+    u8g.drawPixel(x+2,y+6);
     u8g.drawPixel(x+3,y+6);
-    // u8g.drawPixel(x+4,y+6);
+    u8g.drawPixel(x+4,y+6);
     
     // восьмая строка
     // u8g.drawPixel(x+0,y+7);

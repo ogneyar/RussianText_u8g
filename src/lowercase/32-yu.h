@@ -54,7 +54,7 @@ void yu(uint8_t x, uint8_t y) {
     u8g.drawPixel(x+2,y+4);
     // u8g.drawPixel(x+3,y+4);
     // u8g.drawPixel(x+4,y+4);
-    u8g.drawPixel(x+4,y+4); // 6
+    u8g.drawPixel(x+5,y+4); // 6
     
     // шестая строка
     u8g.drawPixel(x+0,y+5);
@@ -62,7 +62,7 @@ void yu(uint8_t x, uint8_t y) {
     u8g.drawPixel(x+2,y+5);
     // u8g.drawPixel(x+3,y+5);
     // u8g.drawPixel(x+4,y+5);
-    u8g.drawPixel(x+4,y+5); // 6
+    u8g.drawPixel(x+5,y+5); // 6
     
     // седьмая строка
     u8g.drawPixel(x+0,y+6);
@@ -70,7 +70,7 @@ void yu(uint8_t x, uint8_t y) {
     u8g.drawPixel(x+2,y+6);
     // u8g.drawPixel(x+3,y+6);
     // u8g.drawPixel(x+4,y+6);
-    u8g.drawPixel(x+4,y+6); // 6
+    u8g.drawPixel(x+5,y+6); // 6
     
     // восьмая строка
     u8g.drawPixel(x+0,y+7);
