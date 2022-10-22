@@ -107,6 +107,45 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('т'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('т' & 0x00ff) ) ) {
             t(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('у'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('у' & 0x00ff) ) ) {
+            u(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ф'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ф' & 0x00ff) ) ) {
+            f(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('х'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('х' & 0x00ff) ) ) {
+            h(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ц'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ц' & 0x00ff) ) ) {
+            c(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ч'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ч' & 0x00ff) ) ) {
+            ch(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ш'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ш' & 0x00ff) ) ) {
+            sh(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('щ'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('щ' & 0x00ff) ) ) {
+            sch(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ъ'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ъ' & 0x00ff) ) ) {
+            er(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ы'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ы' & 0x00ff) ) ) {
+            eri(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ь'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ь' & 0x00ff) ) ) {
+            ere(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('э'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('э' & 0x00ff) ) ) {
+            e(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('ю'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('ю' & 0x00ff) ) ) {
+            yu(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('я'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('я' & 0x00ff) ) ) {
+            ya(x, y);
         }
         
         else 
@@ -169,6 +208,45 @@ void send(char * str, uint8_t x, uint8_t y) {
         }else 
         if ( ( (str[i] & 0x00ff) == ('Т'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Т' & 0x00ff) ) ) {
             T(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('У'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('У' & 0x00ff) ) ) {
+            U(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ф'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ф' & 0x00ff) ) ) {
+            F(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Х'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Х' & 0x00ff) ) ) {
+            H(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ц'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ц' & 0x00ff) ) ) {
+            C(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ч'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ч' & 0x00ff) ) ) {
+            CH(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ш'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ш' & 0x00ff) ) ) {
+            SH(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Щ'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Щ' & 0x00ff) ) ) {
+            SCH(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ъ'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ъ' & 0x00ff) ) ) {
+            ER(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ы'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ы' & 0x00ff) ) ) {
+            ERI(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ь'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ь' & 0x00ff) ) ) {
+            ERE(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Э'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Э' & 0x00ff) ) ) {
+            E(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Ю'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Ю' & 0x00ff) ) ) {
+            YU(x, y);
+        }else 
+        if ( ( (str[i] & 0x00ff) == ('Я'>>8 & 0x00ff) ) && ( (str[i+1] & 0x00ff) == ('Я' & 0x00ff) ) ) {
+            YA(x, y);
         }
    
         i = i + 2;

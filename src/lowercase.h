@@ -21,18 +21,18 @@
 #include "lowercase/18-r.h"   // р
 #include "lowercase/19-s.h"   // с
 #include "lowercase/20-t.h"   // т
-// #include "lowercase/21-u.h"   // у
-// #include "lowercase/22-f.h"   // ф
-// #include "lowercase/23-h.h"   // х
-// #include "lowercase/24-c.h"   // ц
-// #include "lowercase/25-ch.h"  // ч
-// #include "lowercase/26-sh.h"  // ш
-// #include "lowercase/27-sch.h" // щ
-// #include "lowercase/28-er.h"  // ъ
-// #include "lowercase/29-eri.h" // ы
-// #include "lowercase/30-ere.h" // ь
-// #include "lowercase/31-e.h"   // э
-// #include "lowercase/32-yu.h"  // ю
-// #include "lowercase/33-ya.h"  // я
+#include "lowercase/21-u.h"   // у
+#include "lowercase/22-f.h"   // ф
+#include "lowercase/23-h.h"   // х
+#include "lowercase/24-c.h"   // ц
+#include "lowercase/25-ch.h"  // ч
+#include "lowercase/26-sh.h"  // ш
+#include "lowercase/27-sch.h" // щ
+#include "lowercase/28-er.h"  // ъ
+#include "lowercase/29-eri.h" // ы
+#include "lowercase/30-ere.h" // ь
+#include "lowercase/31-e.h"   // э
+#include "lowercase/32-yu.h"  // ю
+#include "lowercase/33-ya.h"  // я
 
 #endif

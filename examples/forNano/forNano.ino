@@ -5,8 +5,8 @@
 
 
 // разкомментировать под необходимый экран
-// #define SSD1306_128X32
-#define SSD1306_128X64
+#define SSD1306_128X32
+// #define SSD1306_128X64
 
 
 #include <U8glib.h>
@@ -21,30 +21,53 @@ U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE|U8G_I2C_OPT_DEV_0);  // I2C / TWI
 #include <RussianText_u8g.h>
 
 
-void russian_text(bool _border = false);
+void russian_text(byte _mode = ALLCASE, bool _border = false);
 
 
 void setup(void) {
-    u8g.firstPage();
-    do {
-        u8g_prepare();
-        
-        russian_text(true);
-    
-    } while( u8g.nextPage() );
+    russian_text();
+    delay(2000);
 }
 
-void loop(void) {}
+void loop(void) {
+    russian_text(LOWERCASE, true);
+    delay(1000);
+    russian_text(UPPERCASE);
+    delay(1000);
+}
 
 
 // вывод русских букв на экран
-void russian_text(bool _border) {
+void russian_text(byte _mode, bool _border) {
 
-    if (_border) border(); // функция из библиотеки RussianText_u8g
+    u8g.firstPage();
+    do {
+        u8g_prepare();
 
-    send("абвгдеёжзийклмн", 5+OFFSET, 5);
-    send("опрст", 5+OFFSET, 20);
-    send("АБВГДЕЁЖЗИЙКЛМН", 5+OFFSET, 35);
-    send("ОПРСТ", 5+OFFSET, 50);
+        if (_border) border(); // функция из библиотеки RussianText_u8g
+
+        // send("абвгдеёжзийклмноп", 5+OFFSET, 5);
+        // send("рстуфхцчшщъыьэюя", 5+OFFSET, 20);
+        // send("АБВГДЕЁЖЗИЙКЛМНОП", 5+OFFSET, 35);
+        // send("РСТУФХЦЧШЩЪЫЬЭЮЯ", 5+OFFSET, 50);
+
+        switch(_mode) {
+        case LOWERCASE:
+            // функция send из библиотеки RussianText_u8g
+            send("абвгдеёжзийклмноп", 5+OFFSET, 5); // OFFSET можно убрать
+            send("рстуфхцчшщъыьэюя", 5+OFFSET, 15);
+        break;
+        case UPPERCASE:
+            send("АБВГДЕЁЖЗИЙКЛМНОП", 5+OFFSET, 5);
+            send("РСТУФХЦЧШЩЪЫЬЭЮЯ", 5+OFFSET, 15);
+        break;
+        case ALLCASE:
+            send("абвгдеёжзийклмнопрст", 2+OFFSET, 5);
+            send("АБВГДЕЁЖЗИЙКЛМНОПРСТ", 2+OFFSET, 18);
+        break;
+        }    
+    
+    
+    } while( u8g.nextPage() );
     
 }
