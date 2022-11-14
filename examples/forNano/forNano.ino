@@ -2,19 +2,27 @@
 // Arduino Nano
 // for SSD1306_128X32
 // or SSD1306_128X64
+// I2C or SPI
 
 
 // разкомментировать под необходимый экран
-#define SSD1306_128X32
-// #define SSD1306_128X64
-
+#define SSD1306_128X32_I2C
+// #define SSD1306_128X64_I2C
+// #define SSD1306_128X64_SPI
 
 #include <U8glib.h>
 
-#ifdef SSD1306_128X32
+#ifdef SSD1306_128X32_I2C
+#define SSD1306_128X32
 U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE|U8G_I2C_OPT_DEV_0);  // I2C / TWI
-#else
+#endif 
+#ifdef SSD1306_128X64_I2C
+#define SSD1306_128X64
 U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE|U8G_I2C_OPT_DEV_0);  // I2C / TWI
+#endif 
+#ifdef SSD1306_128X64_SPI
+#define SSD1306_128X64
+U8GLIB_SSD1306_128X64 u8g(/* SCK */ 13,/* MOSI */ 11,/* CS */ 10,/* DS */ 9,/* RESET */ 8);	// SPI
 #endif 
 
 // подключаем обязательно после создания класса u8g

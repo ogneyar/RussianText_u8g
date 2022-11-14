@@ -23,6 +23,12 @@
 #define OFFSET 2 // сдвиг координат, связан с некорректным выводом информации (может только у меня)
 #endif
 
+#ifdef U8X8_HAVE_HW_SPI
+#include <SPI.h>
+#endif
+#ifdef U8X8_HAVE_HW_I2C
+#include <Wire.h>
+#endif
 
 #include "uppercase.h" // заглавные
 #include "lowercase.h" // строчные
